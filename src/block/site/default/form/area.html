@@ -1,0 +1,38 @@
+<form action="#" class="{class}">
+	<div class="row _frms__row">
+		<div class="cols _frms__cols">
+			<div class="_frms__input">
+				<label for="area-width">Размер площади, м<sup>2</sup>:</label> 
+				<input type="number" min="0" class="_frms__form-control form-control validate[required]" id="area-width" placeholder="Размер площади">
+			</div>		
+		</div>
+		<div class="cols _frms__cols">
+			<div class="_frms__input">
+				<label for="area-use">Назначение площади:</label> 
+				<input type="text" class="_frms__form-control form-control" id="area-use" placeholder="Назначение">
+			</div>		
+		</div>
+		<div class="cols _frms__cols">
+			<div class="_frms__input">
+				<label for="area-name">Ваше имя:</label> 
+				<input type="text" class="_frms__form-control form-control validate[required]" id="area-name" placeholder="*ФИО"> 
+			</div>
+		</div>
+		<div class="cols _frms__cols">
+			<div class="_frms__input">
+				<label for="area-tel">Ваш телефон:</label> 
+				<input type="tel" class="_frms__form-control form-control validate[required,custom[phone]]" id="area-tel" placeholder="*Телефон">
+			</div>
+		</div>
+		<!--<div class="cols _frms__cols full">
+			<div class="_frms__input">
+				<img src="/img/default/notrobot.jpg" alt="">
+			</div>
+		</div>-->
+		<div class="cols _frms__cols full">
+			<div class="_frms__btn">
+				<button type="submit" class="btn-site btn-orange btn-submit">Оставить заявку</button>
+			</div>	
+		</div>
+	</div>
+</form>

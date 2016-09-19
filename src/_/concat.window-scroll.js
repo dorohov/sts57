@@ -1,0 +1,1 @@
+$(function(){var s=$(document).scrollTop(),a=$(".navbar-site");a.hasClass("fixed")?60>s&&a.addClass("absolute").removeClass("fixed"):s>60&&a.removeClass("absolute").addClass("fixed")});

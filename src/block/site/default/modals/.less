@@ -1,0 +1,146 @@
+ //
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+	overflow: hidden;
+}
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	&.fade .modal-dialog {
+		.translate(0, -25%);
+		.transition-transform(~"0.5s");
+	}
+	&.in .modal-dialog { .translate(0, 0%) }
+	@media @media-size-xs{
+		&.fade .modal-dialog {.translate(-100%, 0);}
+		&.in .modal-dialog { .translate(0, 0%) }
+	}
+	@media @media-screen{
+		&.fade .modal-dialog {.translate(0, 0%);}
+		&.in .modal-dialog { .translate(0, 20%) }
+	}
+	@media @media-size-lg {
+		&.in .modal-dialog { .translate(0, 5%) }
+	}
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal-background;
+	background-color: @modal-backdrop-bg;
+	// Fade for backdrop
+	&.fade { .opacity(0); }
+	&.in { .opacity(0.90); }
+
+}
+.modal-dialog {
+	position: relative;
+	@media @media-size-xs 	{width: auto;	margin: 0px;}  
+	@media @media-size-sm 	{width: 600px;	margin: 10px auto;}  
+	@media @media-screen 	{width: 910px;	margin: 0px auto;}  
+	//background: url(/img/maket/modal.png) no-repeat 0px 0px;
+}
+.modal-content {
+	position: relative;
+	outline: 0;
+}
+.modal-body {
+	position: relative;
+	padding: 35px 50px;
+	background: @white;
+	color: @black;
+	//display: flex;
+	//width: 100%;
+	//height: 100%;
+	//align-items: center;
+	//opacity: 0.7;
+	@media @media-size-xs{padding: 25px;}	
+	@media @media-size-sm{padding: 30px;}	
+	@media @media-notsmart{border-radius: 20px;}
+}
+
+// Title text within header
+.modal-heading{
+	//position: relative;	
+	margin-bottom: 35px;
+	padding-right: 40px;	
+	@media @media-size-xs 	{padding: 60px 0 0 0; text-align: center;}
+	@media @media-size-sm 	{padding-right: 80px; }
+	@media @media-size-lg	{margin-bottom: 20px;}
+}
+.modal-title {
+	@media @media-screen	{
+		font-size: @b-fs + 8px; 	//26
+		line-height: @b-lh + 8px;	//32
+		letter-spacing: 2.2px;
+	} 
+	@media @media-size-xs	{
+		font-size: @b-fs + 4px; 
+		line-height: @b-lh + 4px;
+	} 
+	@media @media-size-sml	{
+		font-size: @b-fs + 6px; 
+		line-height: @b-lh + 6px;
+	} 
+	text-transform: uppercase;
+	font-family: @roboto-bold;
+}
+.modal-btn-close{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    //transform: translateY(-50%);
+	@media @media-size-xs 	{
+		right: 50%; 
+		transform: translateX(50%);
+	}
+}
+.modal-note{
+	margin-bottom: 25px;
+}
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+//custom styles
+.area__modal-dialog {
+	@media @media-screen 	{width: 1070px;}
+}
+.area__modal-body {
+	min-height: 430px;
+	@media @media-screen 	{padding: 35px 130px;}
+}
+.area__modal-heading {
+	@media @media-screen{margin-bottom: 55px;}
+}
+.call__modal-dialog {
+	@media @media-screen 	{width: 500px;}
+}

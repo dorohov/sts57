@@ -1,0 +1,28 @@
+@roboto-light:		robotolight;
+@roboto-bold:		robotobold;
+@roboto-med:		robotomedium;
+@roboto-black-ital:	robotoblackitalic;
+
+@icon: 				Flaticon;
+.include-custom-font(@family: @proxima, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;	
+
+	}
+}
+/*roboto*/
+.include-custom-font(@family: @roboto-light, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-bold, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-med, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-black-ital, 	@weight: normal, @style: normal);
+/*end's roboto*/
+.include-custom-font(@family: @icon, 			@weight: normal, @style: normal);
+
+
+@icon-back: 	"\f100"; 
+@icon-close: 	"\f101";
+@icon-next: 	"\f102";
+@icon-submite: 	"\f103";
