@@ -1,27 +1,30 @@
 <form action="#" class="{class}">
+	<input type="hidden" name="f[Отправлено с]" value="Заявка на территорию" />
+	<input type="hidden" name="f[Заявка на]" value="Любой участок" />
+	
 	<div class="row _frms__row">
 		<div class="cols _frms__cols">
 			<div class="_frms__input">
 				<label for="area-width">Размер площади, м<sup>2</sup>:</label> 
-				<input type="number" min="0" class="_frms__form-control form-control validate[required]" id="area-width" placeholder="Размер площади">
+				<input type="number" min="0" name="f[Размер площади]" class="_frms__form-control form-control validate[required]" id="area-width" placeholder="Размер площади">
 			</div>		
 		</div>
 		<div class="cols _frms__cols">
 			<div class="_frms__input">
 				<label for="area-use">Назначение площади:</label> 
-				<input type="text" class="_frms__form-control form-control" id="area-use" placeholder="Назначение">
+				<input type="text" name="f[Назначение площади]" class="_frms__form-control form-control" id="area-use" placeholder="Назначение">
 			</div>		
 		</div>
 		<div class="cols _frms__cols">
 			<div class="_frms__input">
 				<label for="area-name">Ваше имя:</label> 
-				<input type="text" class="_frms__form-control form-control validate[required]" id="area-name" placeholder="*ФИО"> 
+				<input type="text" name="f[ФИО]" class="_frms__form-control form-control validate[required]" id="area-name" placeholder="*ФИО"> 
 			</div>
 		</div>
 		<div class="cols _frms__cols">
 			<div class="_frms__input">
 				<label for="area-tel">Ваш телефон:</label> 
-				<input type="tel" class="_frms__form-control form-control validate[required,custom[phone]]" id="area-tel" placeholder="*Телефон">
+				<input type="tel" name="f[Телефон]" class="_frms__form-control form-control validate[required,custom[phone]]" id="area-tel" placeholder="*Телефон">
 			</div>
 		</div>
 		<!--<div class="cols _frms__cols full">

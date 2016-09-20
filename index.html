@@ -378,15 +378,17 @@
 						<h3 class="modal-title">Обратный звонок</h3>
 						<button type="button" class="btn-site btn-close modal-btn-close" data-dismiss="modal" title="закрыть форму" aria-hidden="true"></button>
 					</div>	
-					<div class="modal-note">Наш менеджер свяжеться с вами в скором времени</div>
+					<div class="modal-note">Наш менеджер свяжется с Вами в скором времени</div>
 					<form action="#" class="form-site">	
+	<input type="hidden" name="f[Отправлено с]" value="Заявка на звонок" />
+	
 	<div class="_frms__input">
 		<label for="area-name">Ваше имя:</label> 
-		<input type="text" class="_frms__form-control form-control validate[required]" id="area-name" placeholder="*ФИО"> 
+		<input type="text" name="f[ФИО]" class="_frms__form-control form-control validate[required]" id="area-name" placeholder="*ФИО"> 
 	</div>
 	<div class="_frms__input">
 		<label for="area-tel">Ваш телефон:</label> 
-		<input type="tel" class="_frms__form-control form-control validate[required,custom[phone]]" id="area-tel" placeholder="*Телефон">
+		<input type="tel" name="f[Телефон]" class="_frms__form-control form-control validate[required,custom[phone]]" id="area-tel" placeholder="*Телефон">
 	</div>	
 	<div class="_frms__btn">
 		<button type="submit" class="btn-site btn-orange btn-submit">Перезвоните мне</button>
@@ -408,17 +410,19 @@
 						<button type="button" class="btn-site btn-close modal-btn-close" data-dismiss="modal" title="закрыть форму" aria-hidden="true"></button>
 					</div>	
 					<form action="#" class="form-site">	
+	<input type="hidden" name="f[Отправлено с]" value="Обратная связь" />
+	
 	<div class="_frms__input">
 		<label for="area-name">Ваше имя:</label> 
-		<input type="text" class="_frms__form-control form-control validate[required]" id="area-name" placeholder="*ФИО"> 
+		<input type="text" name="f[ФИО]" class="_frms__form-control form-control validate[required]" id="area-name" placeholder="*ФИО"> 
 	</div>
 	<div class="_frms__input">
 		<label for="area-tel">Ваш телефон:</label> 
-		<input type="email" class="_frms__form-control form-control validate[required,custom[phone]]" id="area-tel" placeholder="*Телефон">
+		<input type="tel" name="f[Телефон]" class="_frms__form-control form-control validate[required,custom[phone]]" id="area-tel" placeholder="*Телефон">
 	</div>	
 	<div class="_frms__input">
 		<label for="area-note">Комментарий:</label> 
-		<textarea class="_frms__form-control form-control validate[required]" id="area-note" placeholder="*Комментарий"></textarea>
+		<textarea name="f[Комментарий]" class="_frms__form-control form-control validate[required]" id="area-note" placeholder="*Комментарий"></textarea>
 	</div>	
 	<div class="_frms__btn">
 		<button type="submit" class="btn-site btn-orange btn-submit">Отправить</button>
@@ -447,6 +451,7 @@
 <script src="/js/moment/moment.min.js" ></script>
 <script src="/plugins/owl.carousel/owl.carousel.min.js"></script> 
 <script src="/js/document-ready.js" ></script>
+<script src="/js/azbn.js" ></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>	
 <script src="/js/document-ready-google-map.js" ></script>
